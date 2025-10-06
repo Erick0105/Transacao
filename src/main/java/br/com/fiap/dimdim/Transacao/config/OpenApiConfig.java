@@ -22,8 +22,8 @@ public class OpenApiConfig {
                                 .name("Apache 2.0")
                                 .url("http://springdoc.org"))
                         .contact(new Contact()
-                                .name("Seu Nome ou Nome do Time")
-                                .email("seu.email@fiap.com.br")
+                                .name("DEV Time, Erick e Vicenzo")
+                                .email("rm556862@fiap.com.br")
                                 .url("https://www.fiap.com.br"))
                 );
     }
