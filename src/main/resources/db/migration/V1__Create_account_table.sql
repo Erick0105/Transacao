@@ -3,7 +3,8 @@ CREATE TABLE accounts (
     owner_name VARCHAR(255) NOT NULL,
     account_number VARCHAR(20) NOT NULL UNIQUE,
     balance DECIMAL(19, 2) NOT NULL CHECK (balance >= 0),
-    created_at DATETIMEOFFSET NOT NULL DEFAULT SYSDATETIMEOFFSET(),
+    created_at datetime2(6) NOT NULL DEFAULT SYSDATETIMEOFFSET()
+    ,
 
     CONSTRAINT pk_accounts PRIMARY KEY (id)
 );

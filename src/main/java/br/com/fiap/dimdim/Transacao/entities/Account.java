@@ -18,14 +18,12 @@ import java.util.UUID;
 public class Account {
 
     @Id
-    @GeneratedValue(generator = "UUID")
-    @Column(name = "id", columnDefinition = "uniqueidentifier", updatable = false, nullable = false)
+    @GeneratedValue
+    @Column(name = "id", updatable = false, nullable = false)
     private UUID id;
 
     @Column(name = "owner_name", nullable = false)
     private String ownerName;
-
-
 
     @Column(name = "account_number", unique = true, nullable = false)
     private String accountNumber;
@@ -33,7 +31,7 @@ public class Account {
     @Column(nullable = false)
     private BigDecimal balance;
 
-    @Column(name = "created_at", nullable = false, columnDefinition = "DATETIMEOFFSET")
+    @Column(name = "created_at", nullable = false)
     private OffsetDateTime createdAt;
 
     @OneToMany(mappedBy = "sourceAccount", cascade = CascadeType.ALL, orphanRemoval = true)
@@ -47,3 +45,4 @@ public class Account {
         createdAt = OffsetDateTime.now();
     }
 }
+
