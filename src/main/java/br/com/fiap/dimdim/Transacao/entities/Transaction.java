@@ -41,7 +41,7 @@ public class Transaction {
     @Column(nullable = false)
     private TransactionStatus status;
 
-    @Column(name = "transaction_date", nullable = false)
+    @Column(name = "transaction_date", nullable = false, columnDefinition = "DATETIMEOFFSET")
     private OffsetDateTime transactionDate;
 
     @Column

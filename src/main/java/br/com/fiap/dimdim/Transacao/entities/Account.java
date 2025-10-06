@@ -25,13 +25,15 @@ public class Account {
     @Column(name = "owner_name", nullable = false)
     private String ownerName;
 
+
+
     @Column(name = "account_number", unique = true, nullable = false)
     private String accountNumber;
 
     @Column(nullable = false)
     private BigDecimal balance;
 
-    @Column(name = "created_at", nullable = false)
+    @Column(name = "created_at", nullable = false, columnDefinition = "DATETIMEOFFSET")
     private OffsetDateTime createdAt;
 
     @OneToMany(mappedBy = "sourceAccount", cascade = CascadeType.ALL, orphanRemoval = true)
