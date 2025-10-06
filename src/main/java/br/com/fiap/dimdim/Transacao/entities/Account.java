@@ -19,10 +19,6 @@ public class Account {
 
     @Id
     @GeneratedValue(generator = "UUID")
-    @GenericGenerator(
-        name = "UUID",
-        strategy = "org.hibernate.id.UUIDGenerator"
-    )
     @Column(name = "id", columnDefinition = "uniqueidentifier", updatable = false, nullable = false)
     private UUID id;
 
